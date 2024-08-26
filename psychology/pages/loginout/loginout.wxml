@@ -1,0 +1,5 @@
+<view class="loginout_warp">
+
+  <van-button round type="primary" color="#FA4D46" block custom-style="margin-top: 100rpx;" bindtap="confirmExit">退出登录</van-button>
+
+</view>

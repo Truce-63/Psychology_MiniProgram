@@ -1,0 +1,49 @@
+/* pages/professionaltest/professionaltest.wxss */
+.test-warp {
+  padding: 16rpx;
+  box-sizing: border-box;
+}
+
+.waterfall-container {  
+  /* 设置容器为多列布局 */  
+  column-count: 2; /* 根据需要设置列数 */  
+  column-gap: 10px; /* 设置列之间的间隙 */  
+  width: 100%;  
+  padding: 10px; /* 设置内边距 */  
+  box-sizing: border-box; /* 确保宽度包含内边距 */  
+}  
+  
+.waterfall-item {  
+  /* 设置每个瀑布流项目的样式 */  
+  padding: 16rpx;
+  box-sizing: border-box;
+  display: inline-block;  
+  margin-bottom: 10px; /* 设置项目之间的间隙 */  
+  width: 100%; /* 项目宽度自适应列宽 */  
+  break-inside: avoid; /* 防止内容在列之间拆分 */  
+  background-color: #fff; /* 设置背景色，可选 */  
+  border-radius: 5px; /* 设置圆角，可选 */  
+  overflow: hidden; /* 防止内容溢出，可选 */  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 设置阴影，可选 */  
+}  
+  
+.waterfall-item image {  
+  /* 设置图片的样式 */  
+  width: 100%;  
+  height: auto;  
+  display: block;  
+}  
+  
+.waterfall-item text {  
+  /* 设置文字的样式 */  
+  padding: 10px;  
+  font-size: 14px;  
+  color: #333;  
+}
+
+
+.shopdesc_class {
+  margin-top: 8rpx;
+  font-size: 26rpx;
+  color: #969799;
+}

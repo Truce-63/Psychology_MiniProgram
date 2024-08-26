@@ -1,0 +1,4 @@
+/* pages/scorerecord/scorerecord.wxss */
+.color_text {
+  color: #969799;
+}

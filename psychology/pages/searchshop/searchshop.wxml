@@ -1,0 +1,14 @@
+<van-search value="{{ searchVal }}" placeholder="请输入资讯名称" bind:search="searchShop" bind:change="searchShop">
+</van-search>
+
+<view class="flex_recommend" wx:if="{{shopList && shopList.length !== 0}}">
+  <view class="itemshop" wx:for="{{shopList}}" wx:key="index">
+    <van-image width="100%" height="260rpx" fit="cover" src="{{item.item_image}}" bindtap="topShopdetails" data-shopdata="{{item.id}}" />
+    <view style="text-align: center;">{{item.item_name}}</view>
+  </view>
+</view>
+
+
+<view wx:if="{{shopList && shopList.length === 0}}">
+  <van-empty description="暂无资讯信息" />
+</view>

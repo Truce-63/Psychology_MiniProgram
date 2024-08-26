@@ -1,0 +1,12 @@
+/* pages/orderevaluate/orderevaluate.wxss */
+.add-evaluate {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 16rpx;
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+}

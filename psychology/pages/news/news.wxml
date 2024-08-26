@@ -1,0 +1,24 @@
+<view wx:if="{{newlist && newlist.length !== 0}}">
+  <view wx:for="{{newlist}}" wx:key="{{index}}" style="margin-bottom: 16rpx;">
+    <van-cell value="{{item.activity_time}}">
+      <view slot="title">
+        <van-tag type="warning">{{statusList[item.appointment_status]}}</van-tag>
+        <text style="margin-left:16rpx;">{{item.activity_name}}</text>
+      </view>
+    </van-cell>
+
+    <view class="active_warp">
+      <view class="van-cell-text">内容：{{item.activity_con}}</view>
+      <view class="van-cell-text" data-address="{{item.activity_address}}" bindtap="doAuthor">地址：<text style="font-weight: 600;font-size: 38rpx;">{{item.activity_address}}</text></view>
+      <view class="van-cell-text">温馨提示：{{item.activity_tips}}</view>
+      <view style="display: flex;justify-content: flex-end;">
+        <van-button type="warning" size="mini" icon="flag-o" wx:if="{{!item.appointment_status}}" data-activity="{{item}}" bindtap="addYuyue">预约</van-button>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<view wx:else>
+  <van-empty description="暂无记录" />
+</view>

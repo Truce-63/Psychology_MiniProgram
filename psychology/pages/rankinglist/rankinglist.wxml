@@ -1,0 +1,16 @@
+<view class="ranking_warp">
+  <van-cell center wx:for="{{ rankList }}" wx:key="index" value="最新测试成绩：{{item.curscore}}">
+    <view slot="title" class="flex_cell">
+      <block wx:if="{{index == 0 || index == 1 || index == 2}}">
+        <van-image width="60rpx" fit="widthFix" src="/image/grade{{index + 1}}.png" />
+      </block>
+      <view wx:else class="text_numstyle">{{index + 1}}</view>
+
+      <text style="margin-left: 12rpx;">{{item.student_name}}</text>
+    </view>
+  </van-cell>
+
+  <view wx:if="{{rankList && rankList.length === 0}}">
+    <van-empty description="暂无答题数据" />
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="test-warp">
+
+  <!-- <view class="grid-warp">
+    <view class="itemstyle">
+      <view class="title">抑郁测评</view>
+      <view class="desc">专业评估情绪状态，识别抑郁倾向</view>
+    </view>
+
+    <view class="itemstyle">
+      <view class="title">人格测评</view>
+      <view class="desc">深度剖析个性特质，助力自我认知与发展</view>
+    </view>
+  </view> -->
+
+  <view class="waterfall-container" wx:if="{{classTab && classTab.length !== 0}}">
+    <block wx:for="{{classTab}}" wx:key="index">
+      <view class="waterfall-item" style="{{item.class_name ? '' : 'background-color: #FA4D46'}}" data-type="{{item.id}}" bind:tap="toClassList">
+        <!-- 这里放置你的内容，比如图片、文字等 -->
+        <!-- <image src="{{item.image}}" mode="aspectFit" />   -->
+        <view class="shopname_class">{{item.class_name}}</view>
+        <view class="shopdesc_class">{{item.class_desc}}</view>
+      </view>
+    </block>
+  </view>
+
+</view>

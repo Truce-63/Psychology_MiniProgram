@@ -1,0 +1,4 @@
+/* pages/loginout/loginout.wxss */
+.loginout_warp {
+  padding: 16rpx 32rpx;
+}

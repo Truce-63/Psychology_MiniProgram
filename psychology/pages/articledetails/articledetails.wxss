@@ -1,0 +1,26 @@
+/* pages/articledetails/articledetails.wxss */
+.articledetails-warp {
+  padding: 16rpx;
+  box-sizing: border-box;
+  margin: 16rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  text-align: center;
+}
+
+.time {
+  color: #9195A3;
+  font-size: 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rich-text-content {
+  text-indent: 2em; /* 设置首行缩进为2个字符的宽度 */
+}

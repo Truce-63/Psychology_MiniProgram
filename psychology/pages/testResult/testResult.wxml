@@ -1,0 +1,30 @@
+<!--pages/testResult/testResult.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">测试结果</text>
+  </view>
+
+  <view class="content">
+    <view class="section">
+      <text class="label">测试类别:</text>
+      <text class="value">{{type}}</text>
+    </view>
+    
+    <view class="section">
+      <text class="label">测试分数:</text>
+      <text class="value">{{user_score}}</text>
+    </view>
+
+    <view class="section">
+      <text class="label">结果描述:</text>
+      <text class="value">{{description}}</text>
+    </view>
+
+    <view class="section">
+      <text class="label">建议:</text>
+      <text class="value">{{suggestion}}</text>
+    </view>
+  </view>
+
+  <button type="primary" class="btn" round block color="#FAD7A1" bind:tap="goBack">返回主页</button>
+</view>

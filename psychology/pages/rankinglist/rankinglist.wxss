@@ -1,0 +1,12 @@
+/* pages/rankinglist/rankinglist.wxss */
+.flex_cell {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text_numstyle {
+  width: 60rpx;
+  font-weight: 600;
+  text-align: center;
+}

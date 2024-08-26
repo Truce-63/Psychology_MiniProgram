@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/news/news",
+    "pages/articledetails/articledetails",
+    "pages/shopdetails/shopdetails",
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/searchshop/searchshop",
+    "pages/rankinglist/rankinglist",
+    "pages/examanswer/examanswer",
+    "pages/me/me",
+    "pages/scorerecord/scorerecord",
+    "pages/signin/signin",
+    "pages/modifypassword/modifypassword",
+    "pages/loginout/loginout",
+    "pages/mefavorite/mefavorite",
+    "pages/orderevaluate/orderevaluate",
+    "pages/meappointment/meappointment",
+    "pages/professionaltest/professionaltest",
+    "pages/professionaltestlist/professionaltestlist",
+    "pages/metestrecord/metestrecord",
+    "pages/sendmsg/sendmsg",
+    "pages/testResult/testResult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FA4D46",
+    "navigationBarTitleText": "心理健康",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#FA4D46",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index_icon.png",
+        "selectedIconPath": "image/index_icon_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "iconPath": "image/activity_icon.png",
+        "selectedIconPath": "image/activity_icon_active.png",
+        "text": "活动推送"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "iconPath": "image/classify_icon.png",
+        "selectedIconPath": "image/classify_icon_active.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "image/me_icon.png",
+        "selectedIconPath": "image/me_icon_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-count-down": "@vant/weapp/count-down/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-collapse": "@vant/weapp/collapse/index",
+    "van-collapse-item": "@vant/weapp/collapse-item/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-swipe-cell": "/miniprogram_npm/@vant/weapp/swipe-cell/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-rate": "@vant/weapp/rate/index"
+  }
+}

@@ -1,0 +1,20 @@
+/* pages/me/me.wxss */
+.logo_class {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_class {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cell_text {
+  margin-left: 8rpx;
+}
+
+.margintop {
+  margin-top: 12rpx;
+}

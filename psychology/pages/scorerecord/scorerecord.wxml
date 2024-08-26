@@ -1,0 +1,20 @@
+<view class="scorerecord_warp">
+  <van-notice-bar color="#ffffff" background="#FA4D46" text="测试不重要，你的存在就是满分！" />
+
+  <van-cell wx:for="{{ scoreList }}" wx:key="index" value="{{item.time}}">
+    <view slot="title">
+      <view class="van-cell-text">本次得分：{{item.curscore}}</view>
+      <view class="color_text">
+        <van-icon name="underway" />用时：{{item.answertime}}
+      </view>
+      <!-- 此字段废弃 -->
+      <!-- <view class="color_text">
+        <van-icon name="todo-list" />累计得分：{{item.totalscore}}
+      </view> -->
+    </view>
+  </van-cell>
+
+  <view wx:if="{{scoreList && scoreList.length === 0}}">
+    <van-empty description="暂无答题记录" />
+  </view>
+</view>

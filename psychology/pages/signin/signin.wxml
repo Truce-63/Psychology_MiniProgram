@@ -1,0 +1,12 @@
+<!-- 注册表单 -->
+<view class="signin_form">
+  <van-cell-group>
+    <van-field model:value="{{ username }}" required clearable label="用户名" placeholder="请输入用户名" border="{{ false }}" />
+    <van-field type="password" model:value="{{ userpassword }}" required clearable label="密码" placeholder="请输入密码" border="{{ false }}" />
+    <van-field type="password" model:value="{{ userConfirm }}" required clearable label="密码" placeholder="请输入密码" border="{{ false }}" />
+  </van-cell-group>
+
+  <view class="skip_class" bindtap="goLogin">快速登录</view>
+
+  <van-button round type="primary" color="#FA4D46" block custom-style="margin-top: 100rpx;" bindtap="setRegister">注册</van-button>
+</view>

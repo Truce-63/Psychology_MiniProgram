@@ -1,0 +1,22 @@
+<view class="login_warp">
+
+  <!-- 欢迎语 -->
+  <view class="welcome_text">
+    <view class="h3_title">欢迎进入心理健康资讯小程序</view>
+    <view class="p_text">Welcome</view>
+  </view>
+
+  <!-- 登录表单 -->
+  <view class="login_form">
+    <van-cell-group>
+      <van-field model:value="{{ username }}" required clearable label="用户名" placeholder="请输入用户名" border="{{ false }}" />
+      <van-field type="password" model:value="{{ userpassword }}" required clearable label="密码" placeholder="请输入密码" border="{{ false }}" />
+    </van-cell-group>
+
+    <view class="skip_class" bindtap="goSignin">快速注册</view>
+
+    <van-button round type="primary" color="#FA4D46" block custom-style="margin-top: 100rpx;" bindtap="login">登录</van-button>
+  </view>
+
+
+</view>

@@ -1,0 +1,62 @@
+<view class="index_warp">
+  <!-- swiper轮播图具体配置请查看：https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html -->
+  <swiper indicator-color="rgba(255,255,255,5)" indicator-active-color="#FA4D46" interval="3000" indicator-dots=" circular autoplay" circular="true" autoplay="true">
+    <swiper-item>
+      <van-image width="100%" height="100%" fit="fill" src="/image/slideshow1.png" />
+    </swiper-item>
+    <swiper-item>
+      <van-image width="100%" height="100%" fit="fill" src="/image/slideshow2.png" />
+    </swiper-item>
+    <swiper-item>
+      <van-image width="100%" height="100%" fit="fill" src="/image/slideshow3.png" />
+    </swiper-item>
+  </swiper>
+
+  <view class="content_warp">
+    <van-grid clickable column-num="4">
+      <van-grid-item icon="/image/grid_icon_1.png" link-type="navigateTo" url="/pages/examanswer/examanswer" text="娱乐测试" />
+      <van-grid-item icon="/image/grid_icon_2.png" link-type="navigateTo" url="/pages/scorerecord/scorerecord" text="测试记录" />
+      <van-grid-item icon="/image/grid_icon_3.png" link-type="navigateTo" url="/pages/rankinglist/rankinglist" text="排行榜" />
+      <van-grid-item icon="/image/grid_icon_4.png" link-type="navigateTo" url="/pages/professionaltest/professionaltest" text="专业测评" />
+    </van-grid>
+
+    <view class="flex_recommend">
+      <view class="recommend_left padding_style" style="background-image: url('/image/tips_bg1.png');background-size: 100% 100%;">
+        <view>望眉目有山河</view>
+        <view>清澈明朗</view>
+        <view>愿心中有丘壑</view>
+        <view>一往无前</view>
+      </view>
+      <view class="recommend_right" style="flex-direction: column">
+        <view class="lumpcolor padding_style" style="background-image: url('/image/tips_bg2.png');background-size: 100% 100%;">
+          <view>
+            糟糕的是天气
+          </view>
+          <view>
+            是生活
+          </view>
+          <view>
+            不是你
+          </view>
+        </view>
+        <view class="lumpcolor padding_style" style="background-image: url('/image/tips_bg3.png');background-size: 100% 100%;margin-top: 3%;">
+          <view>
+            一无所知的世界
+          </view>
+          <view>
+            走下去才有惊喜
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+    <view class="shop-view" wx:for="{{shopList}}" wx:for-item="itemcon" wx:key="{{index}}">
+      <van-card custom-class="vancard-background" centered title="{{itemcon.item_name}}" bindtap="topShopdetails" data-shopdata="{{itemcon.id}}" />
+    </view>
+
+
+
+  </view>
+</view>

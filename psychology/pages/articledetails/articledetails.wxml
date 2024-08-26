@@ -1,0 +1,10 @@
+<view class="articledetails-warp">
+  <view class="title">{{articleInfo.title}}</view>
+  <view class="time">
+    {{articleInfo.update_time}}
+    <text style="margin-left: 16rpx;">加入收藏：</text>
+    <van-rate color="#ffd21e" value="{{ articleInfo.isaddfavorite }}" count="1" bind:change="onChange" />
+  </view>
+  <rich-text class="rich-text-content" nodes="{{articleInfo.content}}"></rich-text>
+
+</view>

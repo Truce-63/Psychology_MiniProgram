@@ -1,0 +1,35 @@
+<view class="detector-warp">
+  <view 
+    style="margin-bottom: 36rpx;display: inline;" 
+    wx:for="{{TimuList}}" 
+    wx:key="{{index}}"
+  >
+    <view style="margin-bottom: 5px;margin-top: 15px;">{{index + 1}}：{{item.problem_title}}</view>
+    <van-radio-group  value="{{ radio }}" bind:change="onChange" > 
+      <van-radio 
+        style="padding-top: 5px;" 
+        wx:for="{{item.problem_option}}" 
+        wx:for-item="itemcon" 
+        wx:key="optionIndex" 
+        name="ID{{item.id}}:{{index+1}}_{{itemcon.option_score}}" 
+        custom-class="marginstyle"
+      >
+        {{itemcon.option_name}}
+      </van-radio>
+
+    </van-radio-group>
+    
+  </view>
+  <button type="primary" class="btn" round block color="#FAD7A1" bind:tap="submitTest">提交测试</button>
+
+  <view wx:if="{{showModal}}" class="modal" >
+      <view class="modal-content">
+        <view slot="label">
+        <view class="van-cell-text">本次得分：{{score}} </view>
+        <span>详细结果请前往测试记录界面查看</span>
+      </view>
+      <button bindtap="closePopup"class="btn1">退出</button>
+    </view>
+  </view>
+</view>
+

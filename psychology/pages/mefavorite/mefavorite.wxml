@@ -1,0 +1,11 @@
+<block wx:if="{{shopList && shopList.length !== 0}}">
+  <van-swipe-cell right-width="{{ 65 }}" wx:for="{{shopList}}" class="carts-container" wx:key="index">
+    <van-card custom-class="favorite-content" centered title="{{item.item_name}}" thumb="{{ item.item_image }}" data-shopdata="{{item}}" bindtap="topShopdetails">
+    </van-card>
+    <view slot="right" data-favoritedata="{{item}}" bindtap="cancelShop">取消</view>
+  </van-swipe-cell>
+</block>
+
+<block wx:else>
+  <van-empty description="暂无收藏" />
+</block>

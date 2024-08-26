@@ -1,0 +1,49 @@
+/* pages/professionaltestlist/professionaltestlist.wxss */
+.detector-warp {
+  padding: 40px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.btn{
+  color: aliceblue;
+  margin-top: 30px;
+  width: 150px;
+  background-color: darkslategray !important;
+  margin-bottom: 50px;
+}
+
+.marginstyle {
+  margin-bottom: 10rpx;
+}
+
+.btn1{
+  display: flex;
+  color: aliceblue;
+  margin-top: 30px;
+  width: 80px;
+  height: 35px;
+  background-color: darkslategray !important;
+  align-items: center;
+  justify-content: center;
+}
+/* 弹窗样式 */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 50%;
+}

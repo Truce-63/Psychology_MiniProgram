@@ -1,0 +1,19 @@
+<view class="me_warp">
+  <van-cell>
+    <view slot="title" class="logo_class">
+      <view class="user_class">
+        <van-image round width="80rpx" fit="widthFix" src="{{userData.head_portrait}}" />
+        <view class="cell_text">{{userData.username}}</view>
+      </view>
+    </view>
+  </van-cell>
+  <!-- icon列表前的图标  is-link展示箭头 custom-class添加自己需要的样式 具体API查看https://youzan.github.io/vant-weapp/#/cell -->
+  <van-cell title="专业测试" icon="todo-list-o" is-link url="/pages/metestrecord/metestrecord" />
+  <van-cell title="智能客服" icon="service-o" custom-class="margintop" is-link url="/pages/sendmsg/sendmsg" />
+  <van-cell title="我的收藏" icon="send-gift-o" is-link custom-class="margintop" url="/pages/mefavorite/mefavorite" />
+  <van-cell title="我的预约" icon="todo-list-o" is-link url="/pages/meappointment/meappointment" />
+  <van-cell title="答题" icon="medal-o" is-link custom-class="margintop" bind:click="setCell()" link-type="navigateTo" url="/pages/rankinglist/rankinglist" />
+  <van-cell title="答题记录" icon="good-job-o" is-link bind:click="setCell()" link-type="navigateTo" url="/pages/scorerecord/scorerecord" />
+  <van-cell title="修改密码" icon="shield-o" is-link bind:click="setCell()" link-type="navigateTo" url="/pages/modifypassword/modifypassword" />
+  <van-cell title="设置" icon="setting-o" is-link custom-class="margintop" bind:click="setCell()" link-type="navigateTo" url="/pages/loginout/loginout" />
+</view>

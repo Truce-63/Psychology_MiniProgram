@@ -1,0 +1,17 @@
+/* pages/mefavorite/mefavorite.wxss */
+.favorite-content {
+  margin: 12rpx 0;
+  background-color: #fff !important;
+}
+
+/* 右滑删除的样式 */
+.van-swipe-cell__left,
+.van-swipe-cell__right {
+  background-color: #f44;
+  height: inherit;
+  width: 65px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

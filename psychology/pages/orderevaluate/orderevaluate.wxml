@@ -1,0 +1,12 @@
+<view class="add-evaluate">
+    <van-cell-group>
+      <van-field required clearable label="评分" use-button-slot>
+        <view slot="input">
+          <van-rate color="#FA4D46" value="{{ startNum }}" bind:change="startChange" />
+        </view>
+      </van-field>
+      <van-field required model:value="{{ evaluateCon }}" label="留言内容" type="textarea" placeholder="请输入留言内容" autosize border="{{ false }}" />
+    </van-cell-group>
+
+    <van-button round type="primary" color="#FA4D46" block custom-style="margin-top: 100rpx;" bindtap="saveEvaluate">提交留言</van-button>
+  </view>

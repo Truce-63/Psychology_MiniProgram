@@ -1,0 +1,43 @@
+<view class="shopdetails">
+  <view class="shop-content">
+    <view style="font-weight: 400;font-size: 36rpx;text-align: center;">{{shopObject.item_name}}</view>
+
+    <view style="display: flex;justify-content: flex-end;align-items: center;margin-top: 16rpx;">
+      <van-button plain hairline size="mini" color="#FA4D46" bindtap="clickFavorite">{{shopObject.isfavorite ? '已收藏' : '收藏' }}</van-button>
+    </view>
+
+
+  </view>
+  <view class="richtext">
+    <rich-text class="rich-text-content" space="nbsp" nodes="{{shopObject.item_practice}}"></rich-text>
+  </view>
+
+  <view class="shop-content">
+    <view style="margin-bottom: 16rpx;">留言（{{evaluateList.length}}）</view>
+
+    <block wx:if="{{evaluateList && evaluateList.length !== 0}}">
+      <view class="evaluate-list" wx:for="{{evaluateList}}" wx:key="index">
+        <view class="left">
+          <!-- 本小程序用户留言采用匿名[默认]头像 -->
+          <van-image lazy-load width="60rpx" height="60rpx" fit="cover" src="/image/default_avatar.png" />
+        </view>
+        <view class="right">
+          <view style="font-weight: 600;">{{item.user_name}}</view>
+          <van-rate readonly color="#ffd21e" value="{{ item.evaluate_start }}" />
+          <view>{{item.evaluate_content}}</view>
+          <!-- <van-image lazy-load width="160rpx" height="160rpx" fit="cover" src="{{item.evaluate_url}}" /> -->
+        </view>
+      </view>
+    </block>
+
+    <block wx:else>
+      <van-empty description="暂无留言" />
+    </block>
+  </view>
+
+  <!-- 留言 -->
+  <view class="liuyanBox" data-evaluateid="{{shopObject.id}}" bindtap="clickEvaluate">
+    <van-image width="80rpx" height="80rpx" fit="cover" src="/image/liuyan.png" />
+  </view>
+
+</view>

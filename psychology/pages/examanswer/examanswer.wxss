@@ -1,0 +1,64 @@
+/* pages/examanswer/examanswer.wxss */
+.bg_color {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 260rpx;
+  background-color: #FA4D46;
+  color: #fff;
+}
+
+.content_item {
+  position: absolute;
+  top: 160rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  padding: 32rpx;
+  width: 94%;
+  /* min-height: 520rpx; */
+  background-color: #fff;
+  box-shadow: 0px 0px 29rpx 0px rgba(109, 109, 109, 0.35);
+  border-radius: 20rpx;
+}
+
+.item_color {
+  color: #fff;
+}
+
+.subject {
+  margin-bottom: 16rpx;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.currentnum {
+  font-weight: 600;
+}
+
+.topic_con {
+  padding: 0 10rpx;
+}
+
+.item_right{
+  color: #999;
+  /* flex布局让某个子元素靠右显示，两种方法都可以实现此效果 */
+  /* flex: 1;
+  text-align: right; */
+  margin-left:auto;
+}
+
+.marginstyle {
+  margin-left: 36rpx;
+  margin-bottom: 10rpx;
+}
+
+.tips-style {
+  margin-top: 52rpx;
+  color: #9195A3;
+  font-size: 22rpx;
+}

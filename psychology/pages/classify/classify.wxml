@@ -1,0 +1,30 @@
+<view class="classify_warp">
+
+  <van-search placeholder="请输入资讯名称" value="" readonly bind:click-input="toSearchPage"></van-search>
+
+  <view class="scroll_warp">
+    <!-- left -->
+    <scroll-view class="left" scroll-y>
+      <view wx:for="{{ classTab }}" wx:key="index">
+        <view class="left-list {{currentFirst === item.id ? 'list-active' : '' }}" data-itemdata="{{item}}" bindtap="switchCalss">
+          <view>{{item.class_name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- right -->
+    <scroll-view class="right" scroll-y scroll-with-animation>
+
+      <view class="shop-view" wx:for="{{currentShopList}}" wx:for-item="itemcon" wx:key="index">
+        <view bindtap="topShopdetails" data-shopdata="{{itemcon.id}}">
+          <van-card centered tag="{{itemcon.is_recommend ? '推荐' : ''}}" title="{{itemcon.item_name}}" thumb="{{ itemcon.item_image }}" />
+        </view>
+
+      </view>
+
+      <view wx:if="{{currentShopList && currentShopList.length === 0}}">
+        <van-empty description="此分类下暂无文章信息" />
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

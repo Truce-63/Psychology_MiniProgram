@@ -1,0 +1,35 @@
+<view class="examanswer_warp">
+  <view class="bg_color">
+    <text class="item_color">答题倒计时：</text>
+    <van-count-down use-slot time="{{ time }}" bind:change="timeChange">
+      <text class="item_color">{{ timeData.minutes }}分</text>
+      <text class="item_color">{{ timeData.seconds }}秒</text>
+    </van-count-down>
+  </view>
+
+  <view class="content_item">
+    <view class="subject">
+      <view class="currentnum">{{examInfo.curnum}}.</view>
+      <view class="topic_con">{{examInfo.curcontent}}</view>
+      <view class="item_right">{{examInfo.curnum}}/{{allTotal}}</view>
+    </view>
+    <van-radio-group wx:for="{{ examInfo.optionList }}" wx:key="index" value="{{ radio }}" bind:change="checkChange">
+      <van-radio name="{{item.optionval}}" checked-color="#FA4D46" custom-class="marginstyle">{{item.optionname}}</van-radio>
+    </van-radio-group>
+    <view class="tips-style">
+      {{examInfo.optionList[radioIndex]['optionTips']}}
+    </view>
+
+
+  </view>
+
+  <!-- 总题数减1 -->
+  <block wx:if="{{pageNumber === allTotal - 1}}">
+    <van-button round type="primary" color="#FA4D46" block custom-style="width:60%;position: absolute;bottom: 60rpx;left: 50%;transform: translateX(-50%);" bindtap="addExamInfo">交卷</van-button>
+  </block>
+  <block wx:else>
+    <van-button round type="primary" color="#FA4D46" block custom-style="width:60%;position: absolute;bottom: 60rpx;left: 50%;transform: translateX(-50%);" bindtap="getExam" data-addpageno="{{true}}">下一题</van-button>
+  </block>
+
+
+</view>
